@@ -1,0 +1,18 @@
+<html>
+<head>
+</head>
+<body>
+  <input type="date" id="birthday" placeholder="Enter date of birth"/>
+  <button class="submit" onclick="_calculateAge()">Solve</button>
+  <script>
+
+    function _calculateAge() {
+      var birthday = document.getElementById("birthday").value;
+      var diff_ms = Date.now() - birthday.getUTCFullYear();
+      var age_dt = new Date(diff_ms);
+
+      alert(Math.abs(age_dt.getUTCFullYear() - 1970));
+    }
+  </script>
+</body>
+</html>
